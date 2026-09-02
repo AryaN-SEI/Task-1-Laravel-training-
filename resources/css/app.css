@@ -1,9 +1,289 @@
-@import 'tailwindcss';
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
+/* =========================
+   AGENCY GLOBAL STYLES
+   ========================= */
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+p {
+    line-height: 1.75;
+}
+
+a {
+    color: #ffc800;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d9aa00;
+}
+
+.text-primary {
+    color: #ffc800 !important;
+}
+
+.bg-primary {
+    background-color: #ffc800 !important;
+}
+
+.btn-primary {
+    color: #212529;
+    background-color: #ffc800;
+    border-color: #ffc800;
+}
+
+.btn-primary:hover {
+    color: #212529;
+    background-color: #d9aa00;
+    border-color: #d9aa00;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+#mainNav {
+    background-color: #212529;
+    padding: 1rem 0;
+}
+
+#mainNav .navbar-brand {
+    color: #ffc800;
+    font-size: 1.5rem;
+}
+
+#mainNav .nav-link {
+    color: #fff;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+}
+
+#mainNav .nav-link:hover,
+#mainNav .nav-link.active {
+    color: #ffc800;
+}
+
+/* =========================
+   PAGE SECTIONS
+   ========================= */
+
+.page-section {
+    padding: 7rem 0;
+}
+
+.page-section h2.section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.page-section h3.section-subheading {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 4rem;
+}
+
+/* =========================
+   HOME HERO
+   ========================= */
+
+.masthead {
+    padding-top: 12rem;
+    padding-bottom: 8rem;
+    text-align: center;
+    color: #fff;
+    background-color: #343a40;
+}
+
+.masthead .masthead-subheading {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.masthead .masthead-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+}
+
+.btn-xl {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* =========================
+   ICONS
+   ========================= */
+
+.fa-stack {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    position: relative;
+    vertical-align: middle;
+    width: 2em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.fa-stack-1x {
+    line-height: inherit;
+}
+
+.fa-stack-2x {
+    font-size: 2em;
+}
+
+.fa-stack.fa-3x {
+    font-size: 3rem;
+}
+
+.fa-stack.fa-4x {
+    font-size: 4rem;
+}
+
+.fa-stack.fa-5x {
+    font-size: 5rem;
+}
+
+/* =========================
+   TEAM
+   ========================= */
+
+.team-member {
+    margin-bottom: 3rem;
+}
+
+.team-member h4 {
+    margin-top: 1rem;
+}
+
+/* =========================
+   TIMELINE
+   ========================= */
+
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    content: "";
+    background-color: #e9ecef;
+}
+
+.timeline > li {
+    position: relative;
+    min-height: 170px;
+    margin-bottom: 50px;
+}
+
+.timeline .timeline-image {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    color: #fff;
+    border: 7px solid #e9ecef;
+    border-radius: 50%;
+    background-color: #ffc800;
+}
+
+.timeline .timeline-panel {
+    position: relative;
+    float: right;
+    width: calc(100% - 100px);
+    padding: 0 20px 20px;
+    text-align: left;
+}
+
+.timeline .timeline-heading h4 {
+    margin-top: 0;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    background-color: #f8f9fa;
+}
+
+.btn-social {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* =========================
+   DESKTOP
+   ========================= */
+
+@media (min-width: 992px) {
+
+    #mainNav {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .masthead .masthead-heading {
+        font-size: 4rem;
+    }
+
+    .timeline::before {
+        left: 50%;
+    }
+
+    .timeline > li {
+        min-height: 100px;
+        margin-bottom: 100px;
+    }
+
+    .timeline .timeline-image {
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+    }
+
+    .timeline .timeline-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+    }
+
+    .timeline > li.timeline-inverted .timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+    }
 }

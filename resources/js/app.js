@@ -1,4 +1,2 @@
-import { createApp } from 'vue';
-import WelcomePage from './components/WelcomePage.vue';
-
-createApp(WelcomePage).mount('#app');
+import 'bootstrap';
+import '@fortawesome/fontawesome-free/css/all.min.css';
