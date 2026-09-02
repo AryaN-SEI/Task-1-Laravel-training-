@@ -8,7 +8,7 @@
 ```
 <title>Welcome to Laravel</title>
 
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 ```
 
 </head>
@@ -16,18 +16,7 @@
 <body>
 
 ```
-<main class="welcome-container">
-
-    <h1>GREETINGS, EVERYONE!</h1>
-
-    <p>Welcome to our beginner's guide to Laravel.</p>
-
-    <p>
-        This is your first step towards learning Laravel
-        and building modern web applications.
-    </p>
-
-</main>
+<main id="app"></main>
 ```
 
 </body>
