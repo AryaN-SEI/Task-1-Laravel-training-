@@ -1,5 +1,9 @@
 <script setup>
 import AppLayout from "../Layouts/AppLayout.vue";
+
+defineProps({
+  title: String,
+});
 </script>
 
 <template>
@@ -8,7 +12,9 @@ import AppLayout from "../Layouts/AppLayout.vue";
       <div class="container">
         <div class="masthead-subheading">Welcome To Our Studio!</div>
 
-        <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+        <div class="masthead-heading text-uppercase">
+          {{ title }}
+        </div>
 
         <a class="btn btn-primary btn-xl text-uppercase" href="/services">
           Tell Me More

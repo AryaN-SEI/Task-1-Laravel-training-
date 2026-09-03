@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
+
 class HomeController extends Controller
 {
     public function index()
-{
-    app()->setLocale('hi');
+    {
+        app()->setLocale('hi');
 
-    return view('home', [
-        'title' => __('messages.home_title')
-    ]);
-}
+        return Inertia::render('Home', [
+            'title' => __('messages.home_title')
+        ]);
     }
+}
