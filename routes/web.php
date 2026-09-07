@@ -7,6 +7,7 @@ use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\DepartmentsController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\ContactController;
+use Illuminate\Support\Facades\DB;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -19,3 +20,9 @@ Route::get('/departments', [DepartmentsController::class, 'index'])->name('depar
 Route::get('/team', [TeamController::class, 'index'])->name('team');
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+
+Route::get('/dropdown-1', function () {
+    $users = DB::table('users')->get();
+
+    return view('dropdown-1', compact('users'));
+});
