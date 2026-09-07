@@ -4,27 +4,18 @@ import { Link } from "@inertiajs/vue3";
 
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <Link class="navbar-brand" href="/"> AGENCY </Link>
+    <nav class="navbar">
+      <div class="brand">User Management</div>
 
-        <div class="navbar-nav ms-auto">
-          <Link class="nav-link" href="/">Home</Link>
-          <Link class="nav-link" href="/about">About</Link>
-          <Link class="nav-link" href="/services">Services</Link>
-          <Link class="nav-link" href="/departments">Departments</Link>
-          <Link class="nav-link" href="/team">Team</Link>
-          <Link class="nav-link" href="/contact">Contact</Link>
-        </div>
+      <div class="nav-links">
+        <Link :href="route('users.index')"> Users </Link>
+
+        <Link :href="route('users.create')"> Add User </Link>
       </div>
     </nav>
 
-    <main>
+    <main class="container">
       <slot />
     </main>
-
-    <footer class="footer py-4">
-      <div class="container text-center">Copyright © AGENCY 2026</div>
-    </footer>
   </div>
 </template>
