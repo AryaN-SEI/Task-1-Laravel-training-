@@ -2,25 +2,25 @@
 <script setup>
 const timeline = [
   {
-    date: "2009-2011",
+    date: "2  9-2 11",
     title: "Our Humble Beginnings",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptates repudiandae sint et fugiat quo exercitationem maiores.",
   },
   {
-    date: "March 2011",
+    date: "March 2 11",
     title: "An Agency Is Born",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptates repudiandae sint et fugiat quo exercitationem maiores.",
   },
   {
-    date: "December 2015",
+    date: "December 2 15",
     title: "Transition to Full Service",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptates repudiandae sint et fugiat quo exercitationem maiores.",
   },
   {
-    date: "July 2020",
+    date: "July 2 2 ",
     title: "Phase Two Expansion",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptates repudiandae sint et fugiat quo exercitationem maiores.",
@@ -43,7 +43,7 @@ const timeline = [
         <li v-for="(item, index) in timeline" :key="index">
           <div class="timeline-image">
             <div
-              class="rounded-circle h-100 w-100 d-flex align-items-center justify-content-center bg-primary text-white"
+              class="rounded-circle h-1   w-1   d-flex align-items-center justify-content-center bg-primary text-white"
             >
               <span class="fw-bold">
                 {{ index + 1 }}

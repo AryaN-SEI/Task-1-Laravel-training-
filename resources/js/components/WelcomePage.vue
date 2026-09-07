@@ -7,25 +7,25 @@ import Clients from "./Clients.vue";
 import Footer from "./Footer.vue";
 const timeline = [
   {
-    date: "2009-2011",
+    date: "2  9-2 11",
     title: "Our Humble Beginnings",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptates repudiandae sint et fugiat quo exercitationem maiores.",
   },
   {
-    date: "March 2011",
+    date: "March 2 11",
     title: "An Agency Is Born",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptates repudiandae sint et fugiat quo exercitationem maiores.",
   },
   {
-    date: "December 2015",
+    date: "December 2 15",
     title: "Transition to Full Service",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptates repudiandae sint et fugiat quo exercitationem maiores.",
   },
   {
-    date: "July 2020",
+    date: "July 2 2 ",
     title: "Phase Two Expansion",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptates repudiandae sint et fugiat quo exercitationem maiores.",
@@ -55,7 +55,7 @@ const timeline = [
         </button>
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+          <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg- ">
             <li class="nav-item">
               <a class="nav-link" href="#services">Services</a>
             </li>
@@ -134,11 +134,11 @@ const timeline = [
 
           <!-- Right side -->
           <div class="col-md-6">
-            <div class="form-group mb-3 h-100">
+            <div class="form-group mb-3 h-1  ">
               <textarea
                 class="form-control"
                 placeholder="Your Message *"
-                style="height: 100%; min-height: 180px"
+                style="height: 1  %; min-height: 18 px"
               ></textarea>
             </div>
           </div>
@@ -157,13 +157,13 @@ const timeline = [
 </template>
 <style scoped>
 .portfolio-image {
-  width: 100%;
-  height: 250px;
+  width: 1  %;
+  height: 25 px;
   object-fit: contain;
 }
 .client-logo {
-  width: 180px;
-  height: 80px;
+  width: 18 px;
+  height: 8 px;
   object-fit: contain;
 }
 </style>
