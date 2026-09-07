@@ -2,9 +2,9 @@
 import { Link } from "@inertiajs/vue3";
 
 import AppLayout from "../layouts/AppLayout.vue";
-import ButtonLink from "../Components/ButtonLink.vue";
-import StatCard from "../Components/StatCard.vue";
-import UserCard from "../Components/UserCard.vue";
+import ButtonLink from "../components/ButtonLink.vue";
+import StatCard from "../components/StatCard.vue";
+import UserCard from "../components/UserCard.vue";
 
 defineProps({
   totalUsers: {

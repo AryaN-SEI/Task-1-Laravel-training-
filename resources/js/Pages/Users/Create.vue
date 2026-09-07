@@ -3,10 +3,10 @@ import { ref } from "vue";
 import { Link, useForm } from "@inertiajs/vue3";
 
 import AppLayout from "../../layouts/AppLayout.vue";
-import Button from "../../Components/Button.vue";
-import ButtonLink from "../../Components/ButtonLink.vue";
-import Card from "../../Components/Card.vue";
-import FormField from "../../Components/FormField.vue";
+import Button from "../../components/Button.vue";
+import ButtonLink from "../../components/ButtonLink.vue";
+import Card from "../../components/Card.vue";
+import FormField from "../../components/FormField.vue";
 
 const showPassword = ref(false);
 
