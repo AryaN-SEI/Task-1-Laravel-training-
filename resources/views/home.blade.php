@@ -1,228 +1,100 @@
 @extends('layouts.app')
 
-@section('title', $title)
+@section('title', 'User Management')
 
 @section('content')
 
-<!-- =========================
-     HERO
-     ========================= -->
+```
+<div class="home-page">
 
-<header class="masthead">
+    <section class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">Laravel CRUD Application</span>
 
-<div class="container">
+            <h1>User Management System</h1>
 
-    <div class="masthead-subheading">
-        {{ __('messages.home_title') }}
-    </div>
-
-    <div class="masthead-heading text-uppercase">
-        We Build Digital Experiences
-    </div>
-
-    <p class="lead text-white mb-5">
-        Creative design, powerful development and digital solutions
-        that help your business stand out.
-    </p>
-
-    <a
-        class="btn btn-primary btn-xl text-uppercase me-2"
-        href="{{ route('services') }}">
-        Our Services
-    </a>
-
-    <a
-        class="btn btn-outline-light btn-xl text-uppercase"
-        href="{{ route('contact') }}">
-        Contact Us
-    </a>
-
-</div>
-
-</header>
-
-<!-- =========================
-     INTRODUCTION
-     ========================= -->
-
-<section class="page-section">
-<div class="container">
-
-    <div class="row align-items-center">
-
-        <div class="col-lg-6 mb-5 mb-lg-0">
-
-            <h2 class="section-heading text-uppercase">
-                We Create. We Build. We Grow.
-            </h2>
-
-            <p class="text-muted">
-                AGENCY is a creative digital agency focused on building
-                modern websites and digital experiences for businesses.
+            <p>
+                A complete user management application built with Laravel,
+                Eloquent ORM, MySQL, Blade, and modern CRUD practices.
             </p>
 
-            <p class="text-muted">
-                From creative ideas to development and marketing, our
-                team works together to turn your vision into reality.
+            <div class="hero-actions">
+                <a href="{{ route('users.index') }}" class="btn btn-primary">
+                    View Users
+                </a>
+
+                <a href="{{ route('users.create') }}" class="btn btn-secondary">
+                    + Add User
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="section-heading">
+            <h2>What can you do?</h2>
+            <p>
+                Use the application to manage user records from one place.
             </p>
-
-            <a
-                href="{{ route('about') }}"
-                class="btn btn-primary text-uppercase mt-3">
-                Learn More
-            </a>
-
         </div>
 
-        <div class="col-lg-6">
+        <div class="feature-grid">
 
-            <div class="bg-dark text-white rounded-3 p-5 text-center shadow">
-
-                <span class="fa-stack fa-5x mb-3">
-
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-
-                    <i class="fas fa-laptop-code fa-stack-1x fa-inverse"></i>
-
-                </span>
-
-                <h3 class="text-uppercase">
-                    Digital Excellence
-                </h3>
-
-                <p class="text-white-50 mb-0">
-                    Innovative solutions designed for modern businesses.
+            <a href="{{ route('users.index') }}" class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>View Users</h3>
+                <p>
+                    Browse all users, search by name or email, and view
+                    individual user details.
                 </p>
+            </a>
 
+            <a href="{{ route('users.create') }}" class="feature-card">
+                <div class="feature-icon">＋</div>
+                <h3>Create User</h3>
+                <p>
+                    Add a new user with validated name, email, and password
+                    information.
+                </p>
+            </a>
+
+            <div class="feature-card">
+                <div class="feature-icon">✎</div>
+                <h3>Update User</h3>
+                <p>
+                    Edit existing user information while keeping validation
+                    and password handling secure.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⌫</div>
+                <h3>Delete User</h3>
+                <p>
+                    Remove users safely through a confirmation step before
+                    permanently deleting their record.
+                </p>
             </div>
 
         </div>
+    </section>
 
-    </div>
+    <section class="tech-section">
+        <h2>Application Features</h2>
+
+        <div class="tech-list">
+            <span>Laravel</span>
+            <span>Eloquent ORM</span>
+            <span>MySQL</span>
+            <span>Blade</span>
+            <span>CRUD</span>
+            <span>Validation</span>
+            <span>Password Hashing</span>
+            <span>Search</span>
+        </div>
+    </section>
 
 </div>
-
-</section>
-
-<!-- =========================
-     WHY CHOOSE US
-     ========================= -->
-
-<section class="page-section bg-light">
-<div class="container">
-
-    <div class="text-center">
-
-        <h2 class="section-heading text-uppercase">
-            Why Choose AGENCY?
-        </h2>
-
-        <h3 class="section-subheading text-muted">
-            Everything you need to build a strong digital presence.
-        </h3>
-
-    </div>
-
-    <div class="row text-center">
-
-        <!-- Creative -->
-        <div class="col-md-4 mb-5 mb-md-0">
-
-            <span class="fa-stack fa-4x">
-
-                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-
-                <i class="fas fa-lightbulb fa-stack-1x fa-inverse"></i>
-
-            </span>
-
-            <h4 class="my-3">
-                Creative Thinking
-            </h4>
-
-            <p class="text-muted">
-                We bring fresh ideas and creative thinking to every
-                project we work on.
-            </p>
-
-        </div>
-
-
-        <!-- Technology -->
-        <div class="col-md-4 mb-5 mb-md-0">
-
-            <span class="fa-stack fa-4x">
-
-                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-
-                <i class="fas fa-code fa-stack-1x fa-inverse"></i>
-
-            </span>
-
-            <h4 class="my-3">
-                Modern Technology
-            </h4>
-
-            <p class="text-muted">
-                We use modern technologies to create fast, responsive
-                and reliable digital solutions.
-            </p>
-
-        </div>
-
-
-        <!-- Results -->
-        <div class="col-md-4">
-
-            <span class="fa-stack fa-4x">
-
-                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-
-                <i class="fas fa-chart-line fa-stack-1x fa-inverse"></i>
-
-            </span>
-
-            <h4 class="my-3">
-                Real Results
-            </h4>
-
-            <p class="text-muted">
-                Our goal is to create solutions that deliver real value
-                and help your business grow.
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     CALL TO ACTION
-     ========================= -->
-
-<section class="page-section bg-dark text-white">
-
-<div class="container text-center">
-
-    <h2 class="section-heading text-uppercase text-white">
-        Have A Project In Mind?
-    </h2>
-
-    <p class="lead text-white-50 mb-4">
-        Let's work together and turn your idea into something amazing.
-    </p>
-
-    <a
-        href="{{ route('contact') }}"
-        class="btn btn-primary btn-xl text-uppercase">
-        Let's Talk
-    </a>
-
-</div>
-
-</section>
+```
 
 @endsection
